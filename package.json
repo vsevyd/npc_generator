@@ -1,0 +1,16 @@
+{
+  "name": "NPC Generator",
+  "version": "beta.1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [NPC, Non Player Character Generator],
+  "author": "Vsevyd Rudenko aka Fantastic mr. Fox",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.35.2"
+  },
+  "dependencies": {},
+  "description": ""
+}

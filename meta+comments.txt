@@ -1,0 +1,232 @@
+<meta property="og:type" content="website">
+<meta property="og:title" content="Музыкальные онлайн-мероприятия HTML шаблон">
+<meta property="og:description" content="Музыкальные онлайн-мероприятия. Профессиональный HTML шаблон. Отзывчивый, полностью настраиваемый с помощью простого редактора Drag-n-Drop. Вы можете использовать его для таких предметов, как прямой эфир, Музыка, концерт, Билеты, онлайн. Категории: Музыка и развлечения, Text On Image.">
+<meta property="og:image" content="https://images01.nicepage.com/page/67/49/ru/html-shablon-67490.jpg?version=49894f93-60db-4f1d-a268-af9a56b69281">
+<meta property="og:url" content="https://nicepage.com/ru/ht/67490/muzykalnye-onlayn-meropriyatiya-html-shablon">
+
+<meta property="og:site_name" content="Nicepage.com">
+
+сделать перевод для меты
+
+НОВОЕ
+Происхождения, и Сексуальности
+
+возможно стои создать переменные объектов Настроек Генерации Персонажа и сГенерированного персонажа внуть тела функции генерациии
+
+если Нация выбрана = Случайно — выбираем из таблицы случайную Нацию
+иначе выбрана конкретная — берём из таблицы название соотвктствующее сеттингу 
+возвращаем на страницу в форму вывода сгенерированную нацию
+
+генерируем Происходжение по процентной таблице
+
+функция преобразования массива объектов в строку
+
+Плащ и Кинжал
+Поле Боя
+========
+сэр Дункан Стараг рыцарь-храмовник
+Бастард Полуторный меч, посеребрёный, зачарованный
+Двуручный укол удар Большой
+Латная рукавица
+, 1 рука одноручное руки двуручное
+
+Кэсс Кассандра Стараг
+ведьма призыватель
+Метеоритовый кинжал МР
+Волшебная палочка Энтропия
+Гоблинский жезл Волшебная стрела
+
+Лота Лотанария Солнецный Цветок
+травница-чародейка
+Отцовская сабля Скальпель МР
+Шар из Среброкорника МР магический
+Свет Вода Земля Заклинание щит
+
+Фай Файдаен Драконий Кашель
+волшебник-пиромант
+Посох Боевой посох мага Удар Колоть
+Обсидиантовый кинжал
+Любое заклинание
+
+Арчи Арчибальд "Борода Дварфа"
+чародей и бард
+Тесак Хоонгари, посеребрёный МР
+Волшебное оружие
+Драконий язык
+Жезл Боевой жезл МР Огонь Воздух
+Лук МР Составной лук МР ая стрела
+Защита плащом
+
+Лона Лориена "Тёмная Звезда"
+жрица и бард
+Шпага МР Удар
+Дага
+Боевая плеть
+Короткий составной эльфийский лук
+
+Хвиттисворт Варааскег
+гном Изобретатель и Алхимик
+Инициатива
+Очки Действий
+Атака Урон Шанс Крита Крит Урон БронеБойность Сбивание Очков Действий Дальность Парирование Вес Цена Состояние
+Люцернхаммер, клевец
+Люцернхаммер, молот
+Защита
+
+Хэйан Хэйлиан Лунный Ручей Следопыт Высокого Леса
+эльф следопыт
+Дервиш МР Рубить
+Тесак МР
+Метательный нож
+Разящий клинок
+Жезл
+Э Бронебойная стрела
+Деревянный
+Мёртвые не сражаются
+
+завершить раунд бой
+
+объявление переменных
+считывание из БД данных персонажа и заполнение страницы Листа Персонажа
+генерация Инициативы по нажатию поля Инициативы
+
+для унификаци  кода присваеваем константе ЧАР текучего Персонажа !!!
+
+молодой эльф мечник
+хоббит бард эльфийский
+"Раутфир"
+дварфийка и ювелир
+гном жрец
+новый
+
+заполнение параметров оружия
+объект с характеристиками оружия
+если оружие простое
+если оружие много-составное ближнее / рукопашное
+выбору боевого заряда в дистанционном оружии
+перезарядка :: учёт Очков Действий
+Дальность: фут. кл.
+ХОД ход
+
+вскавка дива с фоновым изображением
+
+оружие разряжено !
+
+конец хода
+элемент массива массивов = объект
+
+нужна перезарядка за ОД, возможность менять заряды, заряды кончаются
+создаём селектор зарядов, на всякий случай
+если ОД перезарядки  больше нуля — добавляем опцию перезарядки с ценой ОД
+если у оружия доступен только один вид боеприпасов
+создаём единственную опцию с зарядами / боеприпасами
+создаём несколько опций для зарядов / боепривасов
+если у каждого заряда ограничено количество — зоздаём индивидуальные счетчики зарядов
+указано ограничено
+если оружие даленее — вставляем блок Дальности
+расчет и применение Штрафа за дальность
+— — вставляем блок прицеливания
+Прицеливание: Урон
+добавление бонуса за Прицеливание к Атаке
+ 
+присвоение элементу массива оружия/атики значений
+
+перезаполняем установки дальности стрельбы
+перезаписываем бонусы Сбивания-с-ног
+обнуляем счётчики защит
+снова включаем кнопки атаки
+
+если в оружии есть Зачарование
+ставим поля для Зачарования
+Активировать 1
+если выбрано какое-то Зачарование
+
+Заполняем поля значение
+
+        AName[index]
+        AttOpt[index] = -1; // опция выбранного оружия
+        AttAP[index]  = item.actionPoints; // Action Points
+        ADice[index]  = item.attackDice; // Attack Dice
+        AMod[index]  = item.attackMod; // Attack Modifinder
+        DDice[index]  = item.damageDice; // Damage Dice
+        DMod[index]  = item.damageMod; // Damage Modifinder
+        Crit[index]  = item.criticalChance; // criticalChance
+        CrDam[index]  = item.criticalDamage; // criticalDamage
+        ArmPi[index]  = item.armorPiercing; // armorPiercing
+        KnDwn[index]  = item.knockingDown; // knockingDown
+
+        Rang[index]  = item.range; // attack or shutting range
+
+        Ammo[index]  = []; // Ammonition Counter
+        Ammos[index]  = [[],[],[],[],[],];
+        Load[index]  = []; // loaded Ammo(nition) ?
+        ReLd[index]  = []; // RE-load Ammo(nition) ?
+        AimAP[index] = 1; // aiming Action Points value
+        AimMax[index] = 4; // aiming Maxinum Score
+        AimAmn[index] = 0; // aiming Amount
+        AimBon[index] = 2; // aiming Bonus
+        AimDam[index] = 0; // aiming Damage Bonus
+//
+        DefAP[index]  = [];
+        DeVal[index]  = [];
+        DeAmt[index]  = [];
+Метать
+//
+            // добавляем реакцию по выбору боевого заряда в дистанционном оружии
+            console.log(`att_Select_${N+1}${index+1}`);
+            console.log(document.getElementById(`att_Select_15`));
+            document.getElementById(`att_Select_${N+1}${index+1}`).addEventListener("change", function fillAmmoValues() {
+            console.log(`att_Select_${N+1}${index+1}`);
+            console.log(document.getElementById(`att_Select_${N+1}${index+1}`));
+                AttOpt[N][index] = document.getElementById(`att_Select_${N+1}${index+1}`).value -1;
+        
+                if ("actionPoints" in item.wParts[AttOpt[N][index]]) AttAP[N][index] = item.wParts[AttOpt[N][index]].actionPoints;
+                else AttAP[N][index] = item.actionPoints;
+                //
+                if ("attackDice" in item.wParts[AttOpt[N][index]]) ADice[N][index] = item.wParts[AttOpt[N][index]].attackDice;
+                else ADice[N][index] = item.attackDice;
+                if ("attackMod"  in item.wParts[AttOpt[N][index]]) AMod[N][index] = item.wParts[AttOpt[N][index]].attackMod;
+                else AMod[N][index] = item.attackMod;
+                //
+                if ("damageDice" in item.wParts[AttOpt[N][index]]) DDice[N][index] = item.wParts[AttOpt[N][index]].damageDice;
+                else DDice[N][index] = item.damageDice;
+                if ("damageMod"  in item.wParts[AttOpt[N][index]]) DMod[N][index] = item.wParts[AttOpt[N][index]].damageMod;
+                else DMod[N][index] = item.damageMod;
+        
+                if ("criticalChance" in item.wParts[AttOpt[N][index]]) Crit[N][index] = item.wParts[AttOpt[N][index]].criticalChance;
+                else Crit[N][index] = item.criticalChance;
+                if ("criticalDamage" in item.wParts[AttOpt[N][index]]) CrDam[N][index] = item.wParts[AttOpt[N][index]].criticalDamage;
+                else CrDam[N][index] = item.criticalDamage;
+                if ("armorPiercing" in item.wParts[AttOpt[N][index]]) ArmPi[N][index] = item.wParts[AttOpt[N][index]].armorPiercing;
+                else ArmPi[N][index] = item.armorPiercing;
+                if ("knockingDown" in item.wParts[AttOpt[N][index]]) KnDwn[N][index] = item.wParts[AttOpt[N][index]].knockingDown;
+                else KnDwn[N][index] = item.knockingDown;
+                //
+                if ("reload" in item.wParts[AttOpt[N][index]]) ReLd[N][index] = item.wParts[AttOpt[N][index]].reload;
+                else ReLd[N][index] = item.reload;
+                if ("range" in item.wParts[Rang[N][index]]) KnDwn[N][index] = item.wParts[AttOpt[N][index]].range;
+                else Rang[N][index] = item.range;
+                //
+                let range = document.getElementById(`attack_${N+1}${index+1}Range`).value;
+                document.getElementById(`attack_${N+1}${index+1}RgVal`).value = range;
+                AMod[N][index] = AMod[N][index] - Math.trunc(range / Rang[N][index]);
+                attack_Roll.textContent = (AMod[N][index] >= 0)
+                    ? `${ADice[N][index]}D+`+`${AMod[N][index]}=`
+                    : `${ADice[N][index]}D`+`${AMod[N][index]}=`;
+                //
+                actionPoints.textContent = AttAP[N][index];
+                // attack_Roll.textContent = `${ADice[N][index]}D+`+`${AMod[N][index]}=`;
+                damage_Roll.textContent = `${DDice[N][index]}D+`+`${DMod[N][index]}=`;
+                criticalChance.textContent = Crit[N][index];
+                criticalDamage.textContent = CrDam[N][index];
+                armorPiercing.textContent = ArmPi[N][index];
+                knockingDown.textContent = (KnDwn[N][index] > 9) ? KnDwn[N][index] : `+${KnDwn[N][index]}`;
+                // перезарядка :: учёт Очков Действий
+                let reload;
+                if (Load[N][index]) reload = 1;
+                else reload = ReLd[N][index];
+                RoAP[N] = RoAP[N] - reload;
+                document.getElementById(`actionPointsResult_${N+1}`).value = RoAP[N];
+                // document.getElementById(`attOption_${index+1}${o+1}`).disabled = "disabled";
+                Load[N][index] = true;
+            });

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en, ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Fav Icons -->
+    <!-- <link rel="manifest" href="favicons/site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/png" href="./favicons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+
+    <!--  Description | Keywords | Author -->
+    <meta name="description" content="Данная страница создана для ускорения и упрощения процедуры проведения боевых столкновений для настольных ролевых игр. Конкретная версия предназначена для ролевых проводимых по правилам ПиКа.">
+    <meta name="keywords"    content="НРИ, Настольные Ролевые Игры, Настольные Повествовательные Игры, ПиК, C&D.">
+    <meta name="author"      content="Vsevyd Roodenko & Sergey Khudan">
+
+    <!--  Essential META Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name"   content="Cloak & Dagger : Battlefield">
+    <meta property="og:title"       content="Cloak & Dagger : Battlefield">
+    <meta property="og:description" content="">
+    <meta property="og:image"       content="">
+    <meta property="og:url"         content="http://fantactic-mr-4ox.xyz/cnd.html">
+
+    <meta name="twitter:title"       content="Cloak & Dagger : Battlefield">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image"       content="">
+    <meta name="twitter:card"        content="summary_large_image">
+
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:type"            content="profile">
+    <meta property="profile:first_name" content="Sergey">
+    <meta property="profile:last_name"  content="Khudan">
+    <meta property="profile:username"   content="">
+    <meta property="og:site_name"       content="Cloak & Dagger : Battlefield">
+    <meta property="og:image:alt"       content="Cloak & Dagger : Battlefield">
+    <meta property="og:see_also"        content="http://facebook.com/groups/Cloak&Dagger">
+
+    <meta name="twitter:site"        content="Cloak & Dagger : Battlefield">
+    <meta name="twitter:image:alt"   content="Cloak & Dagger : Battlefield">
+
+    <!--  Non-Essential, But Required for Analytics -->
+    <meta property="fb:app_id"      content="sergeykhudan">
+    <meta property="fb:admins"      content="http://facebook.com/SergeyKhudan">
+    <meta name="twitter:site"       content="@sergeykhudan">
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+    <!-- <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./cnd.css">
+
+    <title id="site-title">Hvittiswort</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="">
+        <div class="container">
+            <!-- Page Title : Character Name -->
+            <div class="row header justify-content-center align-items-end">
+                <div class="col-12 col-sm-12 col-lg-12 col-xl-11 align-self-end no-padding">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <h1 class="" id="page-title1" title="Character Name">Character Name</h1>
+                        </div>
+                        <div class="wide-screen col-lg-6">
+                            <h1 class="" id="page-title1+" title="Last Name">& Last Name</h1>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <h2 class="" id="page-titl2" title="Character Concept">Character Concept</h2>
+                        </div>
+                        <div class="wide-screen col-lg-5">
+                            <h2 class="" id="page-titl2+" title="& Description">& Description</h2>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Language Selector -->
+                <!-- <div class="col-select-lang align-self-end no-padding">
+                    <select class="select-lang" name="s_lang" id="s_lang" size="1" onchange="Translate()">
+                        <option id="lang_EN" selected="selected" value="eng">EN</option>
+                        <option id="lang_RU" value="rus">RU</option>
+                    </select>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <!-- SITE BODY -->
+    <div class="site-container">
+        <!-- Character Battle Sheet -->
+        <!-- ГДЕ-то ЗдесЬ должна нАчатьсЯ ФОРМА -->
+        <!-- <form class="" action="#" method="get"> -->
+        <div class="container">
+            <!-- ROW_1 :: Initiative & Action Points -->
+            <div class="row justify-content-center row-bg-wt">
+                <!-- Initiative -->
+                <div id="" class="col-9 col-sm-9 col-lg-7 col-xl-6 no-padding">
+                    <div class="darkcell initiative" id="Initiative">
+                        <h3 class="ah3" id="l_Initiative">Инициатива:</h3>
+                        <span class="ah3" id="initiativeRoll">Xd6+M=</span>
+                        <input class="input-light out-h3" type="text" size="2" id="initiativeResult" readonly
+                            placeholder="IN">
+                    </div>
+                    <!-- <div class="lightcell">
+                        <select class="select-form" name="Setting" id="Setting" size="1" disabled>
+                            <option class="" id="l_7th-Sea" selected="selected" value="7th Sea">
+                                7<sup><small>th</small></sup> Sea<sup><small>&trade;</small></sup>
+                            </option>
+                        </select>
+                    </div> -->
+                </div>
+                <!-- Action Points -->
+                <div id="" class="col-3 col-sm-3 col-lg-5 col-xl-5 no-padding">
+                    <div class="darkcell">
+                        <h3 class="ah3 narrow-screen" id="l_AP">ОД:</h3>
+                        <h3 class="ah3 wide-screen" id="l_ActionPoints">Очки Действий:</h3>
+                        <input class="input-light out-h3" type="text" size="2" id="actionPointsResult" readonly
+                            placeholder="AP">
+                    </div>
+                    <!-- <div class="lightcell">
+                        <select class="select-form" name="Rules" id="Rules" size="1" disabled>
+                            <option class id="l_2nd-ed" selected="selected" value="2nd Edition">
+                                2<sup><small>nd</small></sup> Edition
+                            </option>
+                        </select>
+                    </div> -->
+                </div>
+            </div>
+            <!-- ROW_2 Attack & Defence -->
+            <div class="row justify-content-center row-bg-wt">
+                <!-- Attack Column -->
+                <div id="" class="col-8 col-md-7 col-lg-8 col-xl-7 no-padding">
+                    <div class="lightcell">
+                        <h4 class="ah4" id="l_Attack">Атака</h4>
+                    </div>
+                    <!-- Weapon List -->
+                    <div class="">
+                        <!-- Weapon Block -->
+                        <div id="weaponBlock-1" class="block-button">
+                            <!-- Weapon Block Title -->
+                            <div class="darkcell">
+                                <h5 class="narrow-screen" id="wIt-1">short WIt#1:</h5>
+                                <h5 class="wide-screen" id="weaponItem-1">Weapon Item #1:</h5>
+                            </div>
+                            <!-- Weapon Characteristics -->
+                            <div class="row lightcell no-margin">
+                                <div class="col-7 no-padding">
+                                    <h6 class="narrow-screen" id="l_AP-a1">ОД:</h6>
+                                    <h6 class="wide-screen" id="l_ActionPoints-a1">Очков Действий:</h6>
+                                </div>
+                                <div class="col-3 no-padding">
+                                    <p class="ah6" id="actionPoints-1">A</p>
+                                </div>
+
+                                <div class="col-6 col-lg-7 no-padding">
+                                    <h6 class="" id="l_Attack-1">Атака:</h6>
+                                </div>
+                                <div class="col-4 col-lg-3 no-padding">
+                                    <p class="ah6" id="attack-1Roll">Xd6+M=</p>
+                                </div>
+                                <div class="col-2 align-self-end no-padding">
+                                    <input class="input-light out-h6" type="text" size="2" id="attack-1Result" readonly
+                                        placeholder="AT">
+                                </div>
+                                <div class="col-6 col-lg-7 no-padding">
+                                    <h6 class="" id="l_Damage-1">Урон:</h6>
+                                </div>
+                                <div class="col-4 col-lg-3 no-padding">
+                                    <p class="ah6" id="damage-1Roll">Xd6+M=</p>
+                                </div>
+                                <div class="col-2 align-self-end no-padding">
+                                    <input class="input-light out-h6" type="text" size="2" id="damage-1Result" readonly
+                                        placeholder="DM">
+                                </div>
+
+                                <div class="col-2 col-lg-5 no-padding">
+                                    <h6 class="narrow-screen" id="l_CC-1">ШК:</h6>
+                                    <h6 class="wide-screen" id="l_CriticalChance-1">Шанс Крита:</h6>
+                                </div>
+                                <div class="col-1 col-lg-1 no-padding">
+                                    <p class="ah6" id="criticalChance-1">A</p>
+                                </div>
+                                <div class="col-2 col-lg-5 no-padding">
+                                    <h6 class="narrow-screen" id="l_CD-1">КУ:</h6>
+                                    <h6 class="wide-screen" id="l_CriticalDamage-1">Крит Урон:</h6>
+                                </div>
+                                <div class="col-1 col-lg-1 no-padding">
+                                    <p class="ah6" id="criticalDamage-1">A</p>
+                                </div>
+
+                                <div class="col-2 col-lg-5 no-padding">
+                                    <h6 class="narrow-screen" id="l_APr-1">ББ:</h6>
+                                    <h6 class="wide-screen" id="l_ArmorPiercing-1">Броне-Бойн.:</h6>
+                                </div>
+                                <div class="col-1 col-lg-1 no-padding">
+                                    <p class="ah6" id="armorPiercing-1">A</p>
+                                </div>
+                                <div class="col-2 col-lg-5 no-padding">
+                                    <h6 class="narrow-screen" id="l_KD-1">Сб:</h6>
+                                    <h6 class="wide-screen" id="l_KnockingDown-1">Сбивание:</h6>
+                                </div>
+                                <div class="col-1 col-lg-1 no-padding">
+                                    <p class="ah6" id="knockingDown-1">A</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Defence Column -->
+                <div id="" class="col-4 col-md-5 col-lg-4 col-xl-4 no-padding">
+                    <!-- DEFENCE -->
+                    <div class="lightcell">
+                        <h4 class="ah4 narrow-screen" id="l_Def">Защт</h4>
+                        <h4 class="ah4 wide-screen" id="l_Defence">Защита</h4>
+                    </div>
+                    <!-- Defence List -->
+                    <div class="">
+                        <!-- Defence Block -->
+                        <div class="">
+                            <!-- Defence Block Title -->
+                            <div class="darkcell">
+                                <h5 class="narrow-screen" id="l_Parry">Parry:</h5>
+                                <h5 class="wide-screen" id="l_Parrying">Parrying:</h5>
+                            </div>
+                            <!-- Defence Characteristics -->
+                            <div class="row lightcell no-margin">
+                                <div class="col-10 no-padding">
+                                    <h6 class="narrow-screen" id="l_AP-d1">ОД:</h6>
+                                    <h6 class="wide-screen" id="l_ActionPoints-d1">Очков Действий:</h6>
+                                </div>
+                                <div class="col-2  col-lg-1  no-padding">
+                                    <p class="ah6" id="actionPoints-d1">A</p>
+                                </div>
+
+                                <div class="col-10 col-lg-10 no-padding">
+                                    <h6 class="" id="l_ParryingSkill">Parrying:</h6>
+                                </div>
+                                <div class="col-2  col-lg-1  no-padding">
+                                    <p class="ah6" id="ParryingSkill">PD</p>
+                                </div>
+                                <div class="col-10 col-lg-9 no-padding">
+                                    <h6 class="" id="l_ParryingAmount">Количество:</h6>
+                                </div>
+                                <div class="col-2  col-lg-2  no-padding">
+                                    <input class="input-light out-h6" type="text" size="2" id="parryingAmount" readonly
+                                        placeholder="XX">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кнопка "завершить раунд" -->
+            <div class="row justify-content-center row-bg-tr">
+                <div class="col-7 col-lg-7 col-xl-7 col-xxl-7 transparent-cell">
+                    <button class="button-end" id="end_round" onclick="">
+                        завершить раунд
+                    </button>
+                </div>
+                <div class="col-6 col-lg-6 col-xl-6 col-xxl-6 transparent-cell">
+                    <button class="button-end end-fight" id="end_fight" onclick="">
+                        завершить бой
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- </form> -->
+    </div>
+    <!-- FOOTER -->
+    <footer class="">
+        <div class="container footer">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <p class="footer">
+                        Copyleft <a class="footer-title" href="https://t.me/Fantastic_mr_4ox">@Fantastic_mr_4ox</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>
+</body>
+        <!-- <script src="./js/menu.js"></script> -->
+        <script src="./js/hvitti-data.js"></script>
+        <script src="./js/hvitti-main.js"></script>
+        <!-- <script src="./js/translate.js"></script> -->
+        <!-- <script type="text/javascript">
+            document.getElementById('attackBlock_1').addEventListener("click", () => {
+                if (round_AP > 0) {
+                    let attack = diceRoller(CHAR.attack[0].attackDice, 6, HVITTI.attack[0].attackMod);
+                    document.getElementById('attack_1Result').value = attack;
+                    let damage = diceRoller(CHAR.attack[0].damageDice, 6, HVITTI.attack[0].damageMod);
+                    document.getElementById('damage_1Result').value = damage;
+                    round_AP = round_AP - CHAR.attack[0].actionPoints;
+                    document.getElementById('actionPointsResult').value = round_AP;
+                    if (round_AP <= 0) {
+                        for (let i = 0; i < attackList.children.length; i++) {
+                            attackList.children[i].className = "";
+                        }
+                        // attackBlock_1.className = ""; //$('#weaponBlock_1').removeClass('block-button');
+                    }
+                }
+            });
+        </script>
+        <script type="text/javascript">
+            console.log(`!!! TEST !!!`);
+            document.getElementById('attackBlock_2').addEventListener("click", () => {
+                 if (round_AP > 0) {
+                     let attack = diceRoller(CHAR.attack[1].attackDice, 6, HVITTI.attack[1].attackMod);
+                     document.getElementById('attack_2Result').value = attack;
+                     let damage = diceRoller(CHAR.attack[1].damageDice, 6, HVITTI.attack[1].damageMod);
+                     document.getElementById('damage_2Result').value = damage;
+                     round_AP = round_AP - CHAR.attack[1].actionPoints;
+                     document.getElementById('actionPointsResult').value = round_AP;
+                     if (round_AP <= 0) {
+                         for (let i = 0; i < attackList.children.length; i++) {
+                             attackList.children[i].className = "";
+                         }
+                     }
+                 }
+            });
+        </script> -->
+        <!-- <script src="./js/index.js"></script> -->
+        <!-- Bootstrap JavaScript -->
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- jQuery JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</html>

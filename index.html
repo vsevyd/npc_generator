@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en, ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Fav Icons -->
+    <!-- <link rel="manifest" href="favicons/site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/png" href="./favicons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+
+    <!--  Description | Keywords | Author -->
+    <meta name="description" content="Данный Генератор создаёт случайного жителя Европы 17-го века, используя статистические и демографические данные достаточно соответствующие историческим реалиям. Генератор могут использовать Ведущие или Игроки настольных ролевых игр, играющие в 7-е Море, а так же другие игры в псевдо- или альтернативно-исторических сеттингах.">
+    <meta name="keywords"    content="НРИ, Настольные Ролевые Игры, Настольные Повествовательные Игры, Персонаж, НИП, персонаж ведущего, генератор, 7-е Море, Седьмое Море">
+    <meta name="author"      content="Vsevyd Roodenko aka Fantastic mr Fox">
+
+    <!--  Essential META Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name"   content="NPC Generator">
+    <meta property="og:title"       content="Генератор Персонажей для 7-го Моря">
+    <meta property="og:description" content="Генератор для Ведущих или Игроков в 7-е Море. Генератор создаёт случайного жителя Европы 17-го века, используя статистические и демографические данные достаточно соответствующие историческим реалиям.">
+    <meta property="og:image"       content="http://fantactic-mr-4ox.xyz/img/vsevyd_dyvosvet_7th-Sea_logo_tattoo_facebook.jpg">
+    <meta property="og:url"         content="http://fantactic-mr-4ox.xyz/index.html">
+
+    <meta name="twitter:title"       content="Генератор Персонажей для 7-го Моря">
+    <meta name="twitter:description" content="Создаёт случайного жителя Европы 17-го века, используя демографические данные соответствующие историческим реалиям. Для Ведущих и Игроков настольных ролевых игр в 7-е Море.">
+    <meta name="twitter:image"       content="http://fantactic-mr-4ox.xyz/img/vsevyd_dyvosvet_7th-Sea_logo_tattoo_twitter.jpg">
+    <meta name="twitter:card"        content="summary_large_image">
+
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:type"            content="profile">
+    <meta property="profile:first_name" content="Всевид">
+    <meta property="profile:last_name"  content="Руденко">
+    <meta property="profile:username"   content="Fantastic mr Fox">
+    <meta property="og:site_name"       content="NPC Generator">
+    <meta property="og:image:alt"       content="7th Sea Logo by Vsevyd">
+    <meta property="og:see_also"        content="http://facebook.com/groups/7thSea2e">
+
+    <meta name="twitter:site"        content="NPC Generator">
+    <meta name="twitter:image:alt"   content="7th Sea Logo by Vsevyd">
+
+    <!--  Non-Essential, But Required for Analytics -->
+    <meta property="fb:app_id"      content="vsevyd_app_id">
+    <meta property="fb:admins"      content="http://facebook.com/vsevyd">
+    <meta name="twitter:site"       content="@Vsevyd">
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+    <!-- <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title id="site-title">NPC Generator</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="">
+        <div class="container">
+            <div class="row header justify-content-between align-items-end">
+                <div class="col-9 col-sm-10 col-xl-11 align-self-end no-padding">
+                    <h1 class="" id="page-title" title="NPC Generator version &beta;.1">NPC Generator</h1>
+                </div>
+                <div class="col-select-lang align-self-end no-padding">
+                    <select class="select-lang" name="s_lang" id="s_lang" size="1" onchange="Translate()">
+                        <option id="lang_EN" selected="selected" value="0">EN</option>
+                        <option id="lang_RU" value="1">RU</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- SITE BODY -->
+    <div class="site-container">
+        <!-- Выбор параметров генерации -->
+        <!-- ГДЕ-то ЗдесЬ должна нАчатьсЯ ФОРМА -->
+        <!-- <form class="" action="#" method="get"> -->
+        <div class="container">
+            <!-- ROW_1 + ROW_2 -->
+            <div class="row row-bg-wt">
+                <!-- Setting выбор Сеттинга -->
+                <div id="cel_Setting" class="col-4 col-md-3 order-md-first col-lg-3                col-xl-3 no-padding">
+                    <div class="darkcell rus-font-condensed">
+                        <h2 id="l_Setting">Setting</h2>
+                    </div>
+                    <div class="lightcell">
+                        <select class="select-form" name="Setting" id="Setting" size="1" disabled>
+                            <option class="" id="l_7th-Sea" selected="selected" value="7th Sea">
+                                7<sup><small>th</small></sup> Sea<sup><small>&trade;</small></sup>
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Rules выбор Правил -->
+                <div id="cel_Rules" class="col-8 col-md-9 order-md-first col-lg-9                col-xl-3 order-xl-last no-padding">
+                    <div class="darkcell rus-font-condensed">
+                        <h3 id="l_Rules">& Rules</h3>
+                    </div>
+                    <div class="lightcell">
+                        <select class="select-form" name="Rules" id="Rules" size="1" disabled>
+                            <option class id="l_2nd-ed" selected="selected" value="2nd Edition">
+                                2<sup><small>nd</small></sup> Edition
+                            </option> <!-- Drama System-->
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Nation выбор Нации -->
+                <div id="cel_Nation" class="col-5 col-md-5 order-md-first col-lg-4                col-xl-3 order-xl-first no-padding"> <!-- order-md-first -->
+                    <div class="darkcell rus-font-condensed">
+                        <h6 id="l_Nation">Nation</h6>
+                    </div>
+                    <div class="lightcell"> <!-- Список выбора Нации -->
+                        <select class="select-form" name="Nation" id="Nation" size="1">
+                            <option class id="l_random" selected="selected" value="Random">Random</option>
+                            <option class id="l_avalon" value="England">Avalon</option>
+                            <option class id="l_castille" value="Spain">Castille</option>
+                            <option class id="l_eisen" value="Germany">Eisen</option>
+                            <option class id="l_montaigne" value="France">Montaigne</option>
+                            <option class id="l_sarmatia" value="Poland">Sarmatia</option>
+                            <option class id="l_ussura" value="Russia">Ussura</option>
+                            <option class id="l_vendel" value="Norway">Vendel / Vesten</option>
+                            <option class id="l_vodacce" value="Italy">Vodacce</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Origin выбор Происхождения -->
+                <div class="col-7 col-md-5                col-lg-4 order-lg-first col-xl-3 order-xl-first no-padding">
+                    <div class="darkcell rus-font-condensed">
+                        <h6 id="l_Origin">Origin</h6>
+                    </div>
+                    <div class="lightcell"> <!-- Список выбора Происхождения -->
+                        <select class="select-form" name="Origin" id="Origin" size="1">
+                            <option class id="l_random3" selected="selected" value="Random">Random</option>
+                            <option class id="l_avalon2" value="Avalon">Avalon</option>
+                            <option class id="l_Highland" value="Highland">Highland Marches</option>
+                            <option class id="l_Inismore" value="Inismore">Inismore</option>
+                            <option class id="l_castill2" value="Castille">Castille</option>
+                            <option class id="l_eisen2" value="Eisen">Eisen</option>
+                            <option class id="l_montaign2" value="Montaigne">Montaigne</option>
+                            <option class id="l_sarmatia2" value="Sarmatia">Sarmatia</option>
+                            <option class id="l_ussura2" value="Ussura">Ussura</option>
+                            <option class id="l_vendel2" value="Vendel">Vendel / Vesten</option>
+                            <option class id="l_vodacce2" value="Vodacce">Vodacce</option>
+                        </select>
+                        <div class="">
+                            <label class="check-show" for="show_Origin">
+                                 <input class="check-box" type="checkbox" name="show_Origin" id="show_Origin" value=true
+                                    title="for output Origin in results of generation">
+                                 <span id="l_shw_Origin">output</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Religion выбор Вероисповедания -->
+                <div id="cel_Religi" class="col-5 col-md-5 order-md-last  col-lg-4 order-lg-first col-xl-3 order-xl-first no-padding">
+                    <div class="darkcell rus-font-condensed">
+                        <h6 id="l_Religi">Religion</h6>
+                    </div>
+                    <div class="lightcell"> <!-- Список выбора Вероисповедания -->
+                        <select class="select-form" name="Religion" id="Religion" size="1">
+                            <option class id="l_random5" selected="selected" value="Random">Random</option>
+                            <option class id="l_Avalonian" value="Avalonian">Avalonian</option>
+                            <option class id="l_Protestan" value="Protestant">Protestant</option>
+                            <option class id="l_Vaticine" value="Vaticine">Vaticine</option>
+                            <option class id="l_Orthodox" value="Orthodox">Orthodox</option>
+                            <option class id="l_agnostic" value="Agnostic">agnostic</option>
+                            <option class id="l_muslim" value="Muslim">muslim</option>
+                            <option class id="l_pagan" value="pagan">pagan</option>
+                            <option class id="l_undefined" value="undefined">undefined</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Gender выбор Пола -->
+                <div id="cel_Gender" class="col-7 col-md-7 order-md-first col-lg-4                col-xl-3 order-xl-last no-padding">
+                    <div class="darkcell rus-font-condensed">
+                        <h3 id="l_Gender">Gender</h3>
+                    </div>
+                    <div class="lightcell"> <!-- Список выбора Пола -->
+                        <select class="select-form" name="Gender" id="Gender" size="1">
+                            <option class id="l_random2" selected="selected" value="Random">Random</option>
+                            <option class id="l_Female" value="Female">Female</option>
+                            <option class id="l_Male" value="Male">Male</option>
+                            <option class id="l_NonBin" value="NonBin">Non-Binary</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Age выбор Возраста -->
+                <div class="col-5 col-md-7                col-lg-4                col-xl-3 order-xl-last no-padding">
+                    <div class="darkcell rus-font-condensed">
+                        <h6 id="l_Age">Age</h6>
+                    </div>
+                    <div class="lightcell"> <!-- Bыбор Возраста -->
+                        <select class="select-form" name="Age" id="Age" size="1">
+                            <option class id="l_random6" selected="selected" value="Random">Random</option>
+                            <option class id="l_less1" value=0>less 1 year</option>
+                            <option class id="l_01_05" value=1>1...5 yo</option>
+                            <option class id="l_06_10" value=6>6...10 yo</option>
+                            <option class id="l_11_15" value=11>11...15 yo</option>
+                            <option class id="l_16_20" value=16>16...20 yo</option>
+                            <option class id="l_21_25" value=21>21...25 yo</option>
+                            <option class id="l_26_30" value=26>26...30 yo</option>
+                            <option class id="l_31_35" value=31>31...35 yo</option>
+                            <option class id="l_36_40" value=36>36...40 yo</option>
+                            <option class id="l_41_45" value=41>41...45 yo</option>
+                            <option class id="l_46_50" value=46>46...50 yo</option>
+                            <option class id="l_51_55" value=51>51...55 yo</option>
+                            <option class id="l_56_60" value=56>56...60 yo</option>
+                            <option class id="l_61_65" value=61>61...65 yo</option>
+                            <option class id="l_66_70" value=66>66...70 yo</option>
+                            <option class id="l_71_75" value=71>71...75 yo</option>
+                            <option class id="l_76_80" value=76>76...80 yo</option>
+                            <option class id="l_81_85" value=81>81...85 yo</option>
+                            <option class id="l_86_90" value=86>86...90 yo</option>
+                            <option class id="l_91_95" value=91>91...95 yo</option>
+                            <option class id="l_96_00" value=96>96...100yo</option>
+                        </select>
+                        <!-- <label class="check-random" for="Age_Random">
+                            <span id="l_age_Random" class="">Random</span>
+                            <input class="random-box" type="checkbox" name="Age_Random" id="Age_Random" value="Age_Random">
+                        </label>
+                        <input class="input-number" type="number" name="Age" id="Age" min="0" max="111" step="1" title="Age"
+                            placeholder="Age"  pattern="[0-9]{,3}" size="3"> -->
+                    </div>
+                </div>
+                <!-- Sexuality выбор Ориентации -->
+                <div id="cel_Sexual" class="col-7 col-md-7 order-md-last  col-lg-4                col-xl-3 no-padding">
+                    <div class="darkcell rus-font-condensed">
+                        <h6 id="l_Sexual">Sexuality</h6>
+                    </div>
+                    <div class="lightcell"> <!-- Список выбора Ориентации -->
+                        <select class="select-form" name="Sexuality" id="Sexuality"size="1">
+                            <option class id="l_random4" selected="selected" value="Random">Random</option>
+                            <option class id="l_Asex" value="Asexual">Asexual</option>
+                            <option class id="l_Bi" value="Bi">Bi</option>
+                            <option class id="l_Gay" value="Gay">Gay</option>
+                            <option class id="l_Straight" value="Straight">Straight</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- ROW_3 -->
+            <div class="row row-bg-wt">
+                <!-- Выбор Социального КласСа -->
+                <div id="cel_Est-8-Scl" class=" col-lg-8 col-xl-6 no-padding">
+                    <div class="darkcell rus-font-condensed">
+                        <h6 id="l_Est-8-Scl">Estate & Social&nbsp;Class</h6>
+                    </div>
+                    <div class="lightcell">
+                        <!-- Список выбора Сословия -->
+                        <select class="select-form" name="Estate" id="Estate" size="1">
+                            <option class id="l_random7" selected="selected" value="Random">Random</option>
+                            <option class id="l_Clergy" value="Clergy">Clergy</option>
+                            <option class id="l_Army" value="Army">Army</option>
+                            <option class id="l_Navy" value="Navy">Navy</option>
+                            <option class id="l_Citizen" value="Citizen">Citizen</option>
+                            <option class id="l_Villager" value="Villager">Villager</option>
+                        </select>
+                        <span>&</span>
+                        <!-- Список выбора  Социального Класса -->
+                        <select class="select-form" name="Class" id="Class" size="1">
+                            <option class id="l_random8" selected="selected" value="Random">Random</option>
+                            <option class id="l_Elite" value="Elite">Elite</option>
+                            <option class id="l_Upper" value="Upper class">Upper class</option>
+                            <option class id="l_Top-M" value="Top-Middle">Top-Middle</option>
+                            <option class id="l_Low-M" value="Low-Middle">Low-Middle</option>
+                            <option class id="l_Lower" value="Lower class">Lower class</option>
+                            <option class id="l_Marginal" value="Marginal">Marginal</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Выбор Типа Персонажа -->
+                <div id="cel_Chartr" class=" col-lg-4 col-xl-6 no-padding">
+                    <div class="darkcell rus-font-condensed">
+                        <h6 id="l_Chartr">Character</h6>
+                    </div>
+                    <div class="lightcell"> <!-- Список выбора Charactera -->
+                        <select class="select-form" name="Character" id="NP_Char" size="1">
+                            <option class id="l_Name" selected="selected" value="Name">Name</option>
+                            <option class id="l_Brute" value="Brute">Brute</option>
+                            <option class id="l_Hero" value="Hero">Hero</option>
+                            <option class id="l_Villain" value="Villain">Villain</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- ВЫВОД РЕЗУЛЬТАТОВ -->
+            <!-- ROW_4+5+6 -->
+            <div class="row justify-content-center row-bg-tr">
+                <!-- НОВОЕ поле вывода Национальности -->
+                <div id="" class="col-2 col-sm-3 col-md-2 col-lg-2 col-xxl-2 transparent-cell">
+                    <input class="output-light" type="text" size="9" id="new_Nation" readonly
+                        placeholder="Nation">
+                </div>
+                <!-- НОВОЕ поле вывода Происхождения -->
+                <div id="" class="col-2 transparent-cell">
+                    <input class="output-light" type="text" size="9" id="new_Origin" readonly
+                        placeholder="Origin">
+                </div>
+                <!-- поле вывода Вероисповедания и Сексуальности -->
+                <div id="" class="col-7 col-sm-6 col-md-7  col-lg-3 col-xxl-2 transparent-cell">
+                    <input class="output-light" type="text" size="22" id="NPC_Nation" readonly
+                        placeholder="Religion, Sexuality">
+                </div>
+                <!-- Поле вывода Социального Класса + Возраста -->
+                <div id="cel_Class_out" class="col-11 col-sm-9 col-md-9  col-lg-5 col-xxl-6 transparent-cell">
+                    <input class="output-light" type="text" size="35" id="NPC_Class" readonly
+                        placeholder="Estate & Social Class, Age">
+                </div>
+
+                <!-- поле вывода Имени + Фамилии -->
+                <div id="cel_Name_out" class="col-12 col-md-12          col-lg-9 col-xxl-6 transparent-cell">
+                    <input class="output-big-name" type="text" size="38" id="NPC_Name" readonly
+                        placeholder="Name">
+                </div>
+            </div>
+            <!-- ROW_7 -->
+            <div class="row justify-content-center row-bg-tr">
+                <!-- вывод Силы Брута / Героя / Злодея  -->
+                <div id="cel_Strength_out" class="col-11 col-sm-11 col-md-11 col-lg-7 col-xxl-6 transparent-cell">
+                    <input class="output-light" type="text" size="35" id="NPC_Strength" readonly
+                        placeholder="Strenght |& Influence|"> <!-- Поле вывода Силы НПЦ -->
+                </div>
+            </div>
+            <!-- ROW_6+7 -->
+            <div class="row justify-content-center row-bg-tr">
+                <!-- Поле вывода Арканы : Добродетели -->
+                <div id="cel_Virtue_out" class="col-11 col-sm-10 col-md-9  col-lg-5 col-xxl-5 transparent-cell">
+                    <input class="output-light" type="text" size="13" id="NPC_Virtue" readonly placeholder="Virtue">
+                </div>
+                <!-- Поле вывода Арканы : Порока -->
+                <div id="cel_Hubris_out" class="col-11 col-sm-10 col-md-9  col-lg-6 col-xxl-5 transparent-cell">
+                    <input class="output-light" type="text" size="13" id="NPC_Hubris" readonly placeholder="Hubris">
+                </div>
+            </div>
+            <!-- Кнопка "ГЕНЕРИРОВАТЬ" -->
+            <div class="row justify-content-center row-bg-tr">
+                <div class="col-12 col-lg-9 col-xl-7 col-xxl-6 transparent-cell">
+                    <button class="button-gen" id="generate" onclick="">
+                        GENERATE
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- </form> -->
+    </div>
+    <!-- FOOTER -->
+    <footer class="">
+        <div class="container footer">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <p class="footer">
+                        Copyleft <a class="footer-title" href="https://t.me/Fantastic_mr_4ox">@Fantastic_mr_4ox</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>
+</body>
+
+        <!-- <script src="./js/menu.js"></script> -->
+        <script src="./js/data.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/translate.js"></script>
+
+        <script src="./js/index.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- jQuery JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</html>

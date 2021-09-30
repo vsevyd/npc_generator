@@ -1,0 +1,68 @@
+﻿'use strict'
+// новые базы данных : Массивы Объектов : вкуснотищща
+const ARCHY = {
+    player: 'Zhenia',
+    isGM: false,
+    charShortName: 'Арчи', charLongName: 'Арчибальд "Борода Дварфа"',
+    charShortConcept: 'чародей и бард', charLongDescr: 'чародей и бард',
+    bkgImage: './img/archy_bg.png',
+    maxHP: 22, currentHP: 22,
+    initD6: 3, initMod: 2,
+    maxActionPoints: 16, currentRoundAP: 16,
+    speedFt: 11, speedHx: 2, runMult: 4,
+    armor:   [],
+    attack:  [
+		{ shortName:'Тесак МР', longName:'Хоонгари, посеребрёный МР', meel:true, complex:true,
+            pair:true, mainHand:true, attackPenalty:2,
+            actionPoints:5, attackDice:6, attackMod:1, damageDice:5, damageMod:1,
+            wParts: [
+                { attackName:'Колоть', armorPiercing:4, knockingDown:-1,},
+                { attackName:'Pубить', armorPiercing:2, knockingDown:1,},
+            ],
+            enchantments: [
+                { enchName:'Волшебное оружие', duration:'fight', amount:50, attackDice:1, attackMod:0, damageDice:1, damageMod:0,},
+            ],
+        	criticalChance:12, criticalDamage:6,
+            range:1,  parry:22,
+            weight:1.2, price:48,	coins:'gp', hardness:14, condition:21,},
+
+		{ shortName:'Кинжал MP', longName:'Драконий язык', meel:true, complex:false, actionPoints:3,
+            pair:true, mainHand:false, attackPenalty:2,
+        	attackName:'Колоть', attackDice:6, attackMod:0, damageDice:4, damageMod:1,
+        	criticalChance:12, criticalDamage:6, armorPiercing:2, knockingDown:0,
+            range:0, parry:21, weight:0.6, price:9, coins:'gp', hardness:12, condition:6,},
+
+        { shortName:'Жезл', longName:'Боевой жезл МР', meel:false, complex:true,
+            actionPoints:5, reload:false,
+        	attackDice:3, attackMod:2,
+            wParts: [{ attackName:'Свет', damageDice:5, damageMod:2, },
+                     { attackName:'Огонь', damageDice:6, damageMod:3, },
+                     { attackName:'Воздух', damageDice:5, damageMod:2, },
+                     { attackName:'Земля', damageDice:4, damageMod:0, },],
+            criticalChance:12, criticalDamage:6, armorPiercing:0, knockingDown:0,
+            range:2, parry:22, weight:2, price:'?', coins:'gp', hardness:6, condition:12,},
+
+        { shortName:'Лук МР', longName:'Составной лук МР', meel:false, complex:true,
+            actionPoints:7, reload:3,
+            attackDice:5,   attackMod:1,
+            wParts: [{ attackName:'Боевая стрела', ammunition:20, damageDice:8, damageMod:1, armorPiercing:2, knockingDown:0,},],
+            criticalChance:12, criticalDamage:6,
+            range:5,
+            weight:2, price:6, coins:'gp', hardness:6, condition:12, },
+            ],
+
+    defence: [
+		{ shortName:'Тесак', longName:'Хоонгари, парирование', actionPoints:4,
+            parry:22,
+        },
+		{ shortName:'Кинжал', longName:'Драконий язык, парирование', actionPoints:3,
+            parry:21,
+        },
+		{ shortName:'Уворот', longName:'Уклонение', actionPoints:2,
+            parry: 22,
+        },
+		{ shortName:'Плащ', longName:'Защита плащом', actionPoints:2,
+            parry:17,
+        },
+	],
+};

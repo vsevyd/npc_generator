@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Fav Icons -->
+        <!-- <link rel="manifest" href="favicons/site.webmanifest"> -->
+        <link rel="shortcut icon" type="image/png" href="./favicons/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+
+        <!--  Description | Keywords | Author -->
+        <meta name="description" content="Данная страница создана для ускорения и упрощения процедуры проведения боевых столкновений для настольных ролевых игр. Конкретная версия предназначена для ролевых проводимых по правилам ПиКа.">
+        <meta name="keywords"    content="НРИ, Настольные Ролевые Игры, Настольные Повествовательные Игры, ПиК, C&D.">
+        <meta name="author"      content="Vsevyd Roodenko & Sergey Khudan">
+
+        <!--  Essential META Tags -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name"   content="Cloak & Dagger : Battlefield">
+        <meta property="og:title"       content="Cloak & Dagger : Battlefield">
+        <meta property="og:description" content="">
+        <meta property="og:image"       content="">
+        <meta property="og:url"         content="http://fantactic-mr-4ox.xyz/cnd.html">
+
+        <meta name="twitter:title"       content="Cloak & Dagger : Battlefield">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image"       content="">
+        <meta name="twitter:card"        content="summary_large_image">
+
+        <!--  Non-Essential, But Recommended -->
+        <meta property="og:type"            content="profile">
+        <meta property="profile:first_name" content="Sergey">
+        <meta property="profile:last_name"  content="Khudan">
+        <meta property="profile:username"   content="">
+        <meta property="og:site_name"       content="Cloak & Dagger : Battlefield">
+        <meta property="og:image:alt"       content="Cloak & Dagger : Battlefield">
+        <meta property="og:see_also"        content="http://facebook.com/groups/Cloak&Dagger">
+
+        <meta name="twitter:site"        content="Cloak & Dagger : Battlefield">
+        <meta name="twitter:image:alt"   content="Cloak & Dagger : Battlefield">
+
+        <!--  Non-Essential, But Required for Analytics -->
+        <meta property="fb:app_id"      content="sergeykhudan">
+        <meta property="fb:admins"      content="http://facebook.com/SergeyKhudan">
+        <meta name="twitter:site"       content="@sergeykhudan">
+
+        <!-- Bootstrap CSS -->
+        <link href="bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+        <!-- <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="./cnd.css">
+
+        <title id="site-title">Character Name</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="">
+            <div class="container">
+                <!-- Page Title : Character Name -->
+                <div class="row header">
+                    <div class="col-12 col-xl-11 row-bg-wt no-padding">
+                        <div class="" style="background-color: red; height: 100px; width: 100px; display: none;"></div>
+                        <h1 class="narrow-screen" id="pageTitleShort" title="Character Name">Character Name</h1>
+                        <h1 class="wide-screen" id="pageTitleLong" title="Last Name">Character Name & Last Name</h1><br>
+                        <h2 class="narrow-screen" id="pageTitleConcept" title="Character Concept">Character Concept</h2>
+                        <h2 class="wide-screen" id="pageTitleDescrip" title="& Description">Character Description</h2>
+                    </div>
+                    <!-- Language Selector -->
+                    <!-- <div class="col-select-lang align-self-end no-padding">
+                        <select class="select-lang" name="s_lang" id="s_lang" size="1" onchange="Translate()">
+                            <option id="lang_EN" selected="selected" value="eng">EN</option>
+                            <option id="lang_RU" value="rus">RU</option>
+                        </select>
+                    </div> -->
+                    <!-- Initiative -->
+                    <div id="" class="col-9 col-lg-7 col-xl-6 no-padding">
+                        <div class="darkcell initiative" id="Initiative">
+                            <h3 class="ah3" id="l_Initiative">Инициатива:</h3>
+                            <span class="ah3" id="initiativeRoll">Xd6+M=</span>
+                            <input class="input-light out-h3" type="text" size="2" id="initiativeResult" readonly
+                                placeholder="IN">
+                        </div>
+                    </div>
+                    <!-- Action Points -->
+                    <div id="" class="col-3 col-lg-5 col-xl-5 no-padding">
+                        <div class="darkcell">
+                            <h3 class="ah3 narrow-screen" id="l_AP">ОД:</h3>
+                            <h3 class="ah3 wide-screen" id="l_ActionPoints">Очки Действий:</h3>
+                            <input class="input-light out-h3" type="text" size="2" id="actionPointsResult" readonly
+                                placeholder="AP">
+                        </div>
+                    </div>
+                    <div id="" class="col-5 col-md-7 col-lg-8 col-xl-7 gradient no-padding">
+                        <!-- ATTACK -->
+                        <div id="" class="lightcell">
+                            <h4 class="ah4" id="l_Attack">Атака</h4>
+                        </div>
+                    </div>
+                    <div id="" class="col-7 col-md-5 col-lg-4 col-xl-4 gradient no-padding">
+                        <!-- DEFENCE -->
+                        <div class="lightcell">
+                            <h4 class="ah4 right turn-right" id="l_Defence">Защита</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- SITE BODY -->
+        <div class="site-container">
+            <!-- Character Battle Sheet -->
+            <!-- ГДЕ-то ЗдесЬ должна нАчатьсЯ ФОРМА -->
+            <!-- <form class="" action="#" method="get"> -->
+            <div class="container">
+                <!-- Attack & Defence -->
+                <div class="row justify-content-center row-bg-tr">
+                    <!-- Attack Column -->
+                    <div id="Attack_Column" class="col-6 col-md-7 col-lg-8 col-xl-7 no-padding">
+                        <!-- Attack List -->
+                        <div id="attackList" class="left-slide-block">
+                        </div>
+                    </div>
+                    <!-- Defence Column -->
+                    <div id="Defence_Column" class="col-6 col-md-5 col-lg-4 col-xl-4 no-padding">
+
+                        <!-- Defence List -->
+                        <div id="defenceList" class="right-slide-block hide-slide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </form> -->
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="">
+            <div class="container footer row-bg-wt no-padding">
+                <!-- Кнопка "завершить раунд" -->
+                <div class="row justify-content-center">
+                    <div class="col-7 col-md-5 col-lg-5 col-xl-5 col-xxl-4 transparent-cell">
+                        <button class="button-end" id="end_round" onclick="">
+                            новый раунд
+                        </button>
+                    </div>
+                    <!-- Кнопка "END FIGHT" -->
+                    <div class="col-8 col-md-4 col-lg-4 col-xl-4 col-xxl-3 transparent-cell">
+                        <button class="button-end end-fight" id="end_fight" onclick="">
+                            завершить бой
+                        </button>
+                    </div>
+                </div>
+                <div class="row justify-content-center row-bg-wt">
+                    <div class="col">
+                        <p class="footer">
+                            Copyleft <a class="footer-title" href="https://t.me/Fantastic_mr_4ox">@Fantastic_mr_4ox</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- <script src="./js/index.js"></script> -->
+        <!-- Bootstrap JavaScript -->
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- jQuery JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <!-- <script src="./js/menu.js"></script> -->
+        <script src="./js/ornn-data.js"></script>
+        <script src="./js/ornn-main.js"></script>
+        <script src="./js/char-main.js"></script>
+        <!-- <script src="./js/translate.js"></script> -->
+    </body>
+</html>

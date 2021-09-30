@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap'); */
+/* font-family: 'Old Standard TT', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&display=swap'); */
+
+/* X-Small (xs) devices (portrait phones, less than 576px) => by defaulf */
+:root {
+    --header-height: 151px;
+    --footer-height:  66px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    background-attachment: fixed;
+    background-color: white; /*#f7f7dd;*/
+    /* background-image: url('./img/hvitti_bg.png');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+.background-image {
+    align-self: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+header, footer {
+    position: fixed;
+    width: 100%;
+}
+header {
+    top: 0;
+    z-index: 20;
+}
+footer {
+    bottom: 0;
+    z-index: 10;
+}
+/* div { border: solid 1px lightgray; } */
+div.header {
+    background-color: white;
+    box-shadow: 0 0 11px 0 rgba(255,255,255,.5), 0 0 5px 0 rgba(222,0,0,.1);
+    height: var(--header-height, 39px);
+}
+div.footer {
+    background-color: white;
+    box-shadow: 0 0 11px 0 rgba(255,255,255,.5), 0 0 5px 0 rgba(222,0,0,.1);
+    padding: 2px 0;
+}
+p.footer {
+    font-family: 'Bona Nova', serif;
+    font-variant: normal;
+    font-weight: normal;
+    margin: 0 auto;
+    text-align: center;
+    width: auto;
+}
+.site-container {
+    width:  100%;
+    position: absolute;
+    padding-bottom: var(--footer-height, 22px);
+    top: var(--header-height, 39px);
+}
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+h1, h2, h3, .ah3, h4, h5, h6, .ah6 {
+    font-family: 'Bona Nova', serif;
+    /* text-align: left; /* Выравнивание по левому краю */
+}
+h1, h2, h3, h4, h5, h6 {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+h1, h2 {
+    color: maroon; /* Цвет текста */
+    margin-left: 0.75rem;
+}
+h1 {
+    font-size: 3.9em; /* Размер шрифта =  55px */
+    padding-left: 1.1rem;
+}
+h2 {
+    font-size: 2.75rem;
+    margin-top: -1.0rem;
+    padding-left: 0.2rem;
+}
+h3, .ah3, .out-h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.01em;
+}
+h3 { padding-right: 0.5rem; }
+h4 {
+    font-size: 2.8rem;
+    letter-spacing: 0.05rem;
+}
+.ah4 { margin-bottom: -0.5rem; }
+h5 {
+    font-size: 2.2rem;
+    letter-spacing: 0.05rem;
+}
+h6, .ah6, .out-h6, .out-h61 {
+    font-size: 1.1rem;
+    letter-spacing: 0;
+}
+.ah3 { display: inline-block; }
+.ah3, .ah6 { text-align: center; }
+.out-h3 {
+    height: 25px; /* 50px - 2*padding - 2*border */
+    width:  33px;
+    text-align: center;
+}
+.out-h6 {
+    height: 21px; /* 50px - 2*padding - 2*border */
+    width:  36px;
+    text-align: center;
+}
+.out-h61 {
+    height: 21px;
+    width:  27px;
+    text-align: center;
+}
+.narrow-screen { display: inline-block; }
+.wide-screen { display: none; }
+/* .row-bg-wt {     background: white; } */
+.row-bg-tr, .row-bg-wt {
+    background: rgba(255,255,255,0.5);
+}
+.darkcell {
+    background: maroon; /* Цвет фона заголовка */
+    color: white; /* Цвет текста заголовка */
+    padding: 1px 0 1px 0.75rem; /* отступы вокруг текста: верх право низ лево */
+}
+.lightcell {
+    /* background: white; /* Цвет фона */ */
+    height: auto;
+    padding: 3px 0 3px 0.375rem; /* Поля вокруг формы списка */
+}
+.transparent-cell {
+    padding: 0.1vh 1%; /* Поля вокруг формы списка */
+}
+.initiative:hover {
+    background: #a13;
+    cursor: pointer;
+}
+.initiative:active {
+    background: #700;
+    cursor: pointer;
+}
+/* .initiative:active > h3:active, .ah3:active {
+    color: #faa;
+} */
+.block-button:hover > .darkcell {
+    background: #a13;
+    cursor: pointer;
+}
+.block-button:hover > .lightcell {
+    background: white;
+    cursor: pointer;
+}
+.block-button:active > .darkcell {
+    background: #700;
+    cursor: pointer;
+}
+.block-button:active > .lightcell {
+    background: rgba(255,170,170,0.5); /*#ffaaaa*/;
+    cursor: pointer;
+}
+/* .block-button:active > h6:active, .ah6:active {
+    color: #faa;
+} */
+.rus-font-condensed {
+    font-family: 'Playfair Display', serif;
+}
+select {
+    max-width: 77%;
+}
+select, .input-number, .input-light, .output-big-name {
+    background: #fffafa;
+    border: 1px inset #fee;
+    border-radius: 0.25rem;
+}
+.input-light, .output-big-name {
+    align-items: center;
+    font-family: 'Bona Nova', serif;
+    /* font-style: italic; */
+}
+.input-light {
+    /* width: 100%; */
+}
+.out-h6, .out-h61 {
+    margin: 0 15%;
+}
+p + .ah6 {
+    text-align: center;
+}
+.output-big-name {
+    border: 2px inset #fee;
+    border-radius: 1.5rem;
+    font-size: 1.11rem;
+    font-weight: bolder;
+    letter-spacing: 0.02em;
+    margin: 1vh 1%;
+    width: 98%;
+}
+input {
+    text-align: center;
+    background: #ffe1e1;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+}
+.col-select-lang {
+    width: 49px;
+    margin-right: 0.75rem;
+    margin-bottom: 0.4rem;
+}
+.select-lang {
+    border-radius: 5px;
+    font-size: 16px; /* Размер шрифта */
+    padding: 1px 0;
+    text-align: right;
+    max-width: none;
+}
+.select-form, select + span, select > option {
+    font-family: '', sans-serif;
+    font-size: 1.0rem;
+}
+select + span {
+    color: white;
+}
+/* select > option { font-size: 1.0rem; } */
+.input-number {
+    font-family: '', sans-serif;
+    font-size: 1.28rem;
+    line-height: normal;
+}
+small {
+    font-size: 1.0rem;
+}
+.check-show {
+    font-family: '', sans-serif;
+    font-size: 0.9rem;
+}
+.check-box {
+    margin-left: 0.375rem;
+}
+.check-random {
+    font-family: '', sans-serif;
+    font-size: 1.28rem;
+    padding: 7px 5px 8px 15px;
+}
+.button-end {
+    background: #faa;
+    border: 2px inset #fee;
+    border-radius: 3rem;
+    box-shadow: 0 0 0 0.1rem rgba(0,0,0,.2), 0 5px 5px rgba(0,0,0,.1), inset 0 35px 35px rgba(255,255,255,.7);
+    color: rgba(170,0,0,.7);
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Montserrat Alternates', sans-serif; */
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.0rem;
+    margin: 0.25vh 0;
+    /* padding: 5px; */
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0.3rem 0.3rem rgba(255,255,255,.7);
+    width: 99%;
+}
+.end-fight {
+    letter-spacing: 0.0rem;
+}
+button:hover {
+    cursor: pointer;
+}
+.lang-ru-condensed, .lang-ru-extr-cond {
+    /* -moz-transform: matrix(.85, 0, 0, 1, -16, 0); */
+    font-weight: 600;
+    font-stretch: ultra-condensed;
+    letter-spacing: -0.0rem;
+}
+.lang-ru-conden {
+    /* -moz-transform: matrix(.95, 0, 0, 1, -9, 0); */
+    font-stretch: ultra-condensed;
+    letter-spacing: -0.1rem;
+}
+
+/* breakpoints */
+/* Small sm) devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    :root {
+        --footer-height: 77px;
+    }
+    h1 {
+        font-size: 3.9em; /* Размер шрифта =  55px */
+    }
+    h2 {
+        font-size: 2.75rem;
+        margin-top: -1.0rem;
+    }
+    h3, .ah3, .out-h3 {
+        font-size: 2.0rem;
+    }
+    h3 { padding-right: 0.75rem; }
+    h4 {
+        font-size: 4.4rem;
+        letter-spacing: 0.05rem;
+    }
+    .ah4 { margin-bottom: -0.5rem; }
+    h5 {
+        font-size: 2.9rem;
+        letter-spacing: 0.05rem;
+    }
+    h6, .ah6, .out-h6, .out-h61 {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+    }
+    select, input {
+        padding: 1px;
+    }
+    .out-h3 {
+        height: 33px; /* 50px - 2*padding - 2*border */
+        width:  44px;
+    }
+    .out-h6, .out-h61 {
+        height: 30px; /* 50px - 2*padding - 2*border */
+        width:  44px;
+        margin: 0 auto;
+    }
+    .out-h61 { margin: 1px 5%; }
+    footer, .select-lang, .select-form, select + span, select > option {
+        font-size: 1.1rem; /* Размер шрифта */
+    }
+    .col-select-lang {
+        width: 61px;
+        margin-bottom: 0.6rem;
+    }
+    .select-lang {
+        border-radius: 0.5rem;
+    }
+    .check-show {
+        font-size: 1.4rem;
+    }
+    .lightcell {
+        padding: 0.3vh 0 0.3vh 0.375rem; /* Поля вокруг формы списка */
+    }
+    .transparent-cell {
+        padding: 0.3vh 1%; /* Поля вокруг формы списка */
+    }
+    .output-big-name {
+        font-size: 2.0rem;
+    }
+}
+/* Medium (md) devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    :root {
+        --header-height: 181px;
+        --footer-height:  95px;
+    }
+    h1 {
+        font-size: 4.4rem; /* Размер шрифта =  55px */
+    }
+    h2 {
+        font-size: 3.3rem;
+        margin-top: -1.0rem;
+    }
+    h3, .ah3, .out-h3 {
+        font-size: 2.6rem;
+    }
+    h3 {
+        padding-right: 1.9rem;
+    }
+    h4 {
+        font-size: 5.5rem;
+    }
+    h5 {
+        font-size: 3.3rem;
+    }
+    h6, .ah6, .out-h6 {
+        font-size: 2.6rem;
+    }
+    footer {
+        font-size: 2.0rem;
+    }
+    div.footer {
+        padding-bottom: 5px;
+    }
+    .darkcell {
+        padding: 1px 0 1px 0.9rem; /* отступы вокруг текста: верх право низ лево */
+    }
+    .lightcell {
+        padding: 0.5vh 0 0.5vh 0.45rem; /* Поля вокруг формы списка */
+    }
+    .row-bg-tr {
+        padding-top: 0.4vh;
+        padding-bottom: 0.4vh;
+    }
+    .transparent-cell {
+        padding: 0.4vh 1%; /* Поля вокруг формы списка */
+    }
+    .col-select-lang {
+        width: 71px;
+        margin-bottom: 0.8rem;
+    }
+    .select-lang, .select-form, select + span {
+        font-size: 2.0rem; /* Размер шрифта */
+    }
+    span > .ah6 {
+        margin: 0 auto;
+    }
+    .input-light {
+        margin-bottom: 0.1rem;
+    }
+    .out-h3 {
+        height: 43px; /* 50px - 2*padding - 2*border */
+        width:  55px;
+    }
+    .out-h6 {
+        height: 50px; /* 50px - 2*padding - 2*border */
+        width:  55px;
+        margin: 2px;
+    }
+    .output-big-name {
+        font-size: 2.3rem;
+    }
+    .button-gen {    }
+    .lang-ru-conden {
+        -moz-transform: matrix(.95, 0, 0, 1, -15, 0);
+    }
+}
+/* Large (lg) devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    :root {
+        --footer-height:  99px;
+    }
+    .darkcell {
+        padding-left: 1.1rem; /* отступы вокруг текста: верх право низ лево */
+    }
+    .lightcell {
+        padding: 0.5vh 0 0.5vh 0.75rem; /* Поля вокруг формы списка */
+    }
+    .row-bg-tr {
+        padding-top: 0.5vh;
+        padding-bottom: 0.4vh;
+    }
+    .transparent-cell {
+        padding: 0.6vh 1%; /* Поля вокруг формы списка */
+    }
+    h3, .ah3, .out-h3 {
+        font-size: 2.1rem;
+        letter-spacing: 0;
+    }
+    h4 {
+        font-size: 5.25rem;
+    }
+    h6, .ah6, .out-h6 {
+        font-size: 2.5rem;
+    }
+    .out-h3 {
+        width:  77px;
+    }
+    .out-h6 {
+        width:  88px;
+    }
+    .narrow-screen { display: none; }
+    .wide-screen { display: inline-block; }
+    .check-show {
+        font-size: 1.4rem;
+    }
+    .input-light {
+        padding-top: 0.2rem;
+    }
+    .output-big-name {
+        margin: 0.5vh 1%;
+        padding-top: 0.5rem;
+    }
+    .lang-ru-condensed {
+        /* -moz-transform: matrix(.85, 0, 0, 1, -25, 0); */
+        letter-spacing: -0.1rem;
+    }
+}
+/* X-Large (xl) devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* body { background-size: auto 100%; } */
+    h3, .ah3 {
+        letter-spacing: 0;
+    }
+    .ah4 {
+        margin-bottom: -0.5rem;
+    }
+    .darkcell {
+        padding: 0.5vh 0 0.5vh 0.9rem; /* отступы вокруг текста: верх право низ лево */
+    }
+    .lightcell {
+        padding: 0.9vh 0 0 0.75rem; /* Поля вокруг формы списка */
+    }
+    .check-show {
+        font-size: 1.4rem;
+    }
+    .lang-ru-condensed {
+        /* -moz-transform: matrix(.85, 0, 0, 1, -25, 0); */
+        letter-spacing: -0.01rem;
+    }
+}
+/* EXtra-Large (xxl) devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .lang-ru-condensed {
+        /* -moz-transform: matrix(.85, 0, 0, 1, -25, 0); */
+        letter-spacing: 0.1rem;
+    }
+}

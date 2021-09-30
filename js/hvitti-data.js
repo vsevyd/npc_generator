@@ -1,0 +1,50 @@
+'use strict'
+// export {HVITTI};
+// новые базы данных : Массивы Объектов : вкуснотищща
+const HVITTI = {
+    player: 'Vsevyd',
+    isGM: false,
+    charShortName: 'Хвитти', charLongName: 'Хвиттисворт Варааскег',
+    charShortConcept: 'гном-Механник', charLongDescr: 'гном Изобретатель и Алхимик',
+    bkgImage: './img/hvitti_bg.png',
+    maxHP: 28, currentHP: 28,
+    initD6: 4, initMod: 0,
+    maxActionPoints: 14, currentRoundAP: 14,
+    speedFt: 25, speedHx: 5, runMult: 4,
+    armor:   [],
+    attack:  [
+            {shortName:'Люцернхаммер', longName:'Люцернхаммер', meel:true, complex:true,
+                actionPoints:6, attackDice:5, attackMod:0, damageDice:8,
+                wParts: [
+                    { attackName:'Mолот',  damageMod:2, armorPiercing:0, knockingDown:6,},
+                    { attackName:'Клевец', damageMod:2, armorPiercing:5, knockingDown:2,},
+                    { attackName:'Пика',   actionPoints:5, attackMod:1, damageMod:1, armorPiercing:2, knockingDown:2,},
+                ],
+                criticalChance:6, criticalDamage:11,
+                range:7, parry:20,
+                weight:3.5, price:6, coins:'sp', condition:5, conditionMax:15,
+            },
+        	{shortName:'Тяжол. арбалет', longName:'Тяжелый арбалет МР из даэдра и гномьей стали', meel:false, complex:true,
+                actionPoints:5, reload:14,
+                attackDice:6,   attackMod:1,
+                wParts: [
+                    { attackName:'Боевой болт',       ammunition:20, damageDice:10, damageMod:3, armorPiercing:2, knockingDown:0,},
+                    { attackName:'Алхимический болт', ammunition:20, damageDice:12, damageMod:1, armorPiercing:0, knockingDown:2,},
+                    ],
+                criticalChance:6, criticalDamage:11,
+                range:6, parry:20,
+                weight:5, price:50, coins:'gp', condition:7, conditionMax:35,
+            },
+            ],
+    defence: [
+            { shortName:'Париро&shyвание', longName:'Люцернхаммер, парирование', actionPoints:5,
+    	       parry:20,
+            },
+    		{ shortName:'Уклоне&shyние', longName:'Уклонение', actionPoints:2,
+    	       parry:16,
+            },
+    		{ shortName:'Рукопа&shyшная', longName:'Рукопашная защита', actionPoints:2,
+    	       parry: 14,
+            },
+    ],
+};

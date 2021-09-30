@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Fav Icons -->
+        <!-- <link rel="manifest" href="favicons/site.webmanifest"> -->
+        <link rel="shortcut icon" type="image/png" href="./favicons/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+
+        <!--  Description | Keywords | Author -->
+        <meta name="description" content="Данная страница создана для ускорения и упрощения процедуры проведения боевых столкновений для настольных ролевых игр. Конкретная версия предназначена для ролевых проводимых по правилам ПиКа.">
+        <meta name="keywords"    content="НРИ, Настольные Ролевые Игры, Настольные Повествовательные Игры, ПиК, C&D.">
+        <meta name="author"      content="Vsevyd Roodenko & Sergey Khudan">
+
+        <!--  Essential META Tags -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name"   content="Cloak & Dagger : Battlefield">
+        <meta property="og:title"       content="Cloak & Dagger : Battlefield">
+        <meta property="og:description" content="">
+        <meta property="og:image"       content="">
+        <meta property="og:url"         content="http://fantactic-mr-4ox.xyz/cnd.html">
+
+        <meta name="twitter:title"       content="Cloak & Dagger : Battlefield">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image"       content="">
+        <meta name="twitter:card"        content="summary_large_image">
+
+        <!--  Non-Essential, But Recommended -->
+        <meta property="og:type"            content="profile">
+        <meta property="profile:first_name" content="Sergey">
+        <meta property="profile:last_name"  content="Khudan">
+        <meta property="profile:username"   content="">
+        <meta property="og:site_name"       content="Cloak & Dagger : Battlefield">
+        <meta property="og:image:alt"       content="Cloak & Dagger : Battlefield">
+        <meta property="og:see_also"        content="http://facebook.com/groups/Cloak&Dagger">
+
+        <meta name="twitter:site"        content="Cloak & Dagger : Battlefield">
+        <meta name="twitter:image:alt"   content="Cloak & Dagger : Battlefield">
+
+        <!--  Non-Essential, But Required for Analytics -->
+        <meta property="fb:app_id"      content="sergeykhudan">
+        <meta property="fb:admins"      content="http://facebook.com/SergeyKhudan">
+        <meta name="twitter:site"       content="@sergeykhudan">
+
+        <!-- Bootstrap CSS -->
+        <link href="bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+        <!-- <link href="bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="./monsters.css">
+
+        <title id="site-title">Monsters : GM page</title>
+    </head>
+    <body>
+        <div class="">
+            <div class="row monster-container">
+                <div id="add_mob" class="col-4 npc-col">
+                    <div class="row row-bg-tr align-items-end">
+                        <div id="" class="col-9 no-padding">
+                            <select id="sel_mob" class="select-light sel-mob-h2" name="sel_mob" size="1" onchange="">
+                                <option id="option_0" selected="selected" disabled="disabled" value="0">Pick Mob</option>
+                            </select>
+                        </div>
+                        <!-- + ADD button + -->
+                        <div id="" class="col-3 no-padding align-item-center">
+                            <button class="buttons add-button" id="add_button" onclick="">
+                                <span class="" id="" title="ADD monster">+</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ^ Pick & Add Mob ^ -->
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <footer class=" row-bg-tr">
+            <div class="footer row justify-content-center">
+                <!-- Кнопка "завершить раунд" -->
+                <div class="col-3">
+                    <button class="buttons end-turn" id="end_turn" onclick="">
+                        конец хода
+                    </button>
+                </div>
+                <!-- Кнопка "END FIGHT" -->
+                <div class="col-3">
+                    <button class="buttons end-fight" id="end_fight" onclick="">
+                        завершить бой
+                    </button>
+                </div>
+
+                <div class="row justify-content-center ">
+                    <div class="col">
+                        <p class="footer">
+                            Copyleft <a class="footer-title" href="https://t.me/Fantastic_mr_4ox">@Fantastic_mr_4ox</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- jQuery JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <!-- <script src="./js/menu.js"></script> -->
+        <script src="./js/names.js"></script>
+        <script src="./js/monsters-data.js"></script>
+        <script src="./js/monsters-main.js"></script>
+        <!-- <script src="./js/translate.js"></script> -->
+    </body>
+</html>
